@@ -1,0 +1,32 @@
+html {
+    background-color: rgb(218, 226, 240);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+h1 {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+.buttons h3 {
+    margin-top: 2rem;
+}

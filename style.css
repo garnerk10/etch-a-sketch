@@ -30,3 +30,8 @@ h1 {
 .buttons h3 {
     margin-top: 2rem;
 }
+
+#color-picker {
+    width: 5rem;
+    height: 5rem;
+}

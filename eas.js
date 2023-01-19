@@ -9,6 +9,8 @@ const blackButton = document.getElementById('black-button');
 const rainbowButton = document.getElementById('rainbow-button');
 const sizeButton = document.getElementById('size-button');
 const colorPicker = document.getElementById('color-picker');
+const buttonParent = document.getElementById('btnHolder');
+const allButtons = document.getElementsByTagName('h3');
 
 //Generate the grid
 const generateGrid = (size) => {
@@ -47,8 +49,13 @@ const colorMode = () => {
 colorButton.addEventListener('click', colorMode);
 
 const setCurrentColor = (event) => {
-    currentColor = event.target.value
+    currentColor = event.target.value;
+    for(let i = 0; i < allButtons.length; i++){
+        allButtons[i].style.backgroundColor = currentColor
+    };
+    document.getElementById('heading').style.color = currentColor
 };
+
 colorPicker.addEventListener('input', setCurrentColor);
 
 //Change mode to black
@@ -82,4 +89,4 @@ sizeButton.addEventListener('click', changeSize);
 
 window.onload = () => {
     generateGrid(gridSize);
-}
+};
